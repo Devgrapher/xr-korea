@@ -10,6 +10,7 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-sitemap`,
+    `gatsby-plugin-glamor`,
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
