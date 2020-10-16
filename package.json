@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-landing-page",
+  "name": "extinction-rebellion-korea",
   "private": true,
-  "description": "A simple starter to create a minimal landing page with Gatsby",
+  "description": "Extinction Rebellion Korea Official Site",
   "version": "0.1.0",
-  "author": "Kyle Gill <kyle.robert.gill@gmail.com>",
+  "author": "fourpm <fourpm@protonmail.com>",
   "dependencies": {
     "gatsby": "^2.1.37",
     "gatsby-image": "^2.0.34",
@@ -38,7 +38,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+    "url": "https://github.com/devgrapher/xr-korea"
   },
   "bugs": {
     "url": "https://github.com/gatsbyjs/gatsby/issues"

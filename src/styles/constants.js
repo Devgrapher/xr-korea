@@ -5,6 +5,8 @@ export const COLORS = {
   gray: "#A0A4A6",
   babyBlue: "#50CAF9",
   blue: "#5368f1",
+  green: "#4ea648",
+  white: "#FFFFFF",
 }
 
 export const GRADIENT = `linear-gradient(to top right, ${COLORS.babyBlue}, ${
