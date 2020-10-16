@@ -15,7 +15,7 @@ const Title = () => (
           color: "white",
           marginBottom: "3rem",
           '@media (min-width: 700px)': {
-            width: "32rem",
+            width: "28rem",
           },
         }}
       >

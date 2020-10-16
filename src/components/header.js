@@ -20,23 +20,40 @@ const Header = ({ siteTitle }) => (
     }}
   >
     <div>
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
+      <Link
+        to="/"
+        style={{
+          color: "white",
+          textDecoration: "none",
+        }}
+      >
+        <h1
           style={{
-            color: "white",
-            textDecoration: "none",
+            display: "flex",
+            flexFlow: "colomn",
+            alignItems: "center",
+            margin: 0,
           }}
         >
-          <img style={{width: "3rem"}} src={logo} alt="logo"/>
-        </Link>
-      </h1>
+          <img style={{width: "2.75rem"}} src={logo} alt="logo"/>
+          {/* <span style={{fontSize: "2rem", marginLeft: "0.5rem" }}>
+            멸종반란
+          </span>
+          <span style={{fontSize: "1.75rem", marginLeft: "0.5rem", color: COLORS.gray }}>
+            대한민국
+          </span> */}
+        </h1>
+      </Link>
     </div>
     <div
-      style={{
+      css={{ 
         display: "flex",
         flexFlow: "colomn",
         alignItems: "center",
+        color: "white",
+        // '@media (max-width: 480px)': {
+        //   display: "none",
+        // },
       }}
     >
       <div>
@@ -49,12 +66,11 @@ const Header = ({ siteTitle }) => (
       </div>
       <div>
         <a
-          style={{ textDecoration: "white", color: COLORS.white, marginLeft: "2rem" }}
+          style={{ textDecoration: "white", color: COLORS.white, marginLeft: "1rem" }}
           href="https://www.instagram.com/xr_korea/"
         >
           <img style={{width: "1.75rem", filter: "invert(1)"}} src={instagram} alt="instagram link" />
         </a>
-
       </div>
     </div>
   </header>
