@@ -51,19 +51,8 @@ const Header = ({ siteTitle }) => (
         flexFlow: "colomn",
         alignItems: "center",
         color: "white",
-        // '@media (max-width: 480px)': {
-        //   display: "none",
-        // },
       }}
     >
-      <div>
-        <a
-          style={{ textDecoration: "none", color: COLORS.white, fontSize: "1.15rem", fontWeight: 600 }}
-          href="https://rebellion.global"
-        >
-          XR Global
-        </a>
-      </div>
       <div>
         <a
           style={{ textDecoration: "white", color: COLORS.white, marginLeft: "1rem" }}

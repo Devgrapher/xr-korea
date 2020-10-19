@@ -2,43 +2,39 @@ import React from "react";
 import PropTypes from "prop-types";
 
 import { COLORS } from "../styles/constants";
-import instagram from "../images/instagram.svg";
+import styled from "styled-components";
+
+import xrLogo from "../images/xr-logo-white.svg";
+
+const Container = styled.footer`
+  display: flex;
+  flex-flow: colomn;
+  align-ttems: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  background-color: ${COLORS.green};
+  fontSize: 1rem;
+`;
 
 const Footer = ({ siteTitle }) => (
-  <footer
-    style={{
-      padding: "1rem",
-      backgroundColor: COLORS.green,
-    }}
-  >
-    <div
-      style={{
-        display: "flex",
-        flexFlow: "colomn",
-        alignItems: "center",
-        justifyContent: "space-between",
-        padding: "1rem 2rem",
-        fontSize: "1rem",
-      }}
-    >
-      <div style={{ color: COLORS.white }}>
+    <Container>
+      <div style={{ color: COLORS.white, height: "2rem" }}>
         <a
           style={{ textDecoration: "white", color: COLORS.white }}
-          href="https://www.instagram.com/xr_korea/"
+          href="http://rebellion.global/"
         >
-          <img style={{width: "1rem", filter: "invert(1)"}} src={instagram} alt="instagram link" />
+          <img style={{ height: "100%" }} src={xrLogo} alt="instagram link" />
         </a>
       </div>
       <div style={{ color: COLORS.white, fontWeight: 700 }}>
         <a
-          style={{ textDecoration: "none", color: COLORS.white}}
+          style={{ textDecoration: "none", lineHeight: "2rem", whiteSpace: "nowrap", color: COLORS.white, marginLeft: "0.5rem" }}
           href="mailto:extinctionrebellionkorea"
         >
           © {new Date().getFullYear()} {siteTitle}
         </a>
       </div>
-    </div>
-  </footer>
+    </Container>
 );
 
 Footer.propTypes = {
