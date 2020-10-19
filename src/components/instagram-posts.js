@@ -5,8 +5,16 @@ import Img from "gatsby-image"
 import { StaticQuery, graphql } from "gatsby"
 
 const PostContainer = styled.div`
-  display: flex;
-  flex-flow: row wrap;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  @media (max-width: 480px) {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  }
+  gap: 0.5rem;
+  width: 100%;
+  align-content: center
   justify-content: center;
   max-width: 60rem;
 `
@@ -14,12 +22,7 @@ const PostContainer = styled.div`
 const Wrapper = styled.a`
   position: relative;
   overflow: hidden;
-  width: 100vw;
-  max-width: 14rem;
-  padding: 0.2rem 0.2rem;
-  @media (max-width: 480px) {
-    max-width: 7rem;
-  }
+  width: 100%;
 `
 
 const Node = ({ node }) => (
