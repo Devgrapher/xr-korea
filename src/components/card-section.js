@@ -11,7 +11,6 @@ const CardSection = ({children, bg, bgColor}) => (
       backgroundColor: bgColor,
       bgOpacity: 1,
       marginBottom: "0.5rem",
-      zIndex: -10,
       minHeight: "520px",
     }}
   >
@@ -24,7 +23,6 @@ const CardSection = ({children, bg, bgColor}) => (
         padding: "2rem",
         right: 0,
         top: 0,
-        zIndex: -5,
         opacity: .155,
       }}
       src={bg}
