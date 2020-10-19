@@ -1,9 +1,32 @@
 import React from "react"
 
+import Instagram from "./instagram-posts"
+
 import hourglass from "../images/hourglass.svg"
 import orchid from "../images/orchid.svg"
 import treeOfLife from "../images/tree-of-life.svg"
 import CardSection from "../components/card-section"
+
+const hedlineStyle = {
+  color: "white",
+  marginBottom: "3rem",
+  '@media (min-width: 700px)': {
+    width: "32rem",
+  },
+};
+
+const InstaSection = {
+  position: "relative",
+  display: "flex",
+  flexFlow: "column", 
+  alignItems: "center",
+  overflow: "hidden",
+  padding: "4rem 2rem",
+  backgroundColor: "#3860AA",
+  bgOpacity: 1,
+  marginBottom: "0.5rem",
+  minHeight: "520px",
+}
 
 const Content = () => (
   <div>
@@ -13,13 +36,7 @@ const Content = () => (
     >
       <div>
         <h1
-          css={{
-            color: "white",
-            marginBottom: "3rem",
-            '@media (min-width: 700px)': {
-              width: "32rem",
-            },
-          }}
+          css={hedlineStyle}
         >
           현실을 직시해야 합니다.
         </h1>
@@ -40,13 +57,7 @@ const Content = () => (
     >
       <div>
         <h1
-          css={{
-            color: "white",
-            marginBottom: "3rem",
-            '@media (min-width: 700px)': {
-              width: "32rem",
-            },
-          }}
+          css={hedlineStyle}
         >
           지금 행동해야 합니다.
         </h1>
@@ -67,13 +78,7 @@ const Content = () => (
     >
       <div>
         <h1
-          css={{
-            color: "white",
-            marginBottom: "3rem",
-            '@media (min-width: 700px)': {
-              width: "32rem",
-            },
-          }}
+          css={hedlineStyle}
         >
           이념을 넘어 연대해야 합니다.
         </h1>
@@ -88,7 +93,9 @@ const Content = () => (
         </h3>
       </div>
     </CardSection>
-
+    <div style={InstaSection}>
+      <Instagram />
+    </div>
   </div>
 )
 
