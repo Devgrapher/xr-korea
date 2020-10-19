@@ -17,6 +17,9 @@ const Wrapper = styled.a`
   width: 100vw;
   max-width: 14rem;
   padding: 0.2rem 0.2rem;
+  @media (max-width: 480px) {
+    max-width: 7rem;
+  }
 `
 
 const Node = ({ node }) => (
