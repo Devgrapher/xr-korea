@@ -12,6 +12,7 @@
     "gatsby-plugin-react-helmet": "^3.0.10",
     "gatsby-plugin-sharp": "^2.6.42",
     "gatsby-plugin-sitemap": "^2.0.10",
+    "gatsby-plugin-styled-components": "^3.3.14",
     "gatsby-source-filesystem": "^2.0.27",
     "gatsby-source-instagram": "^0.9.0",
     "gatsby-transformer-sharp": "^2.1.17",
