@@ -1,12 +1,12 @@
-import React from "react"
+import React from "react";
 
-import Instagram from "./instagram-posts"
-import styled from "styled-components"
+import Instagram from "./instagram-posts";
+import styled from "styled-components";
 
-import hourglass from "../images/hourglass.svg"
-import orchid from "../images/orchid.svg"
-import treeOfLife from "../images/tree-of-life.svg"
-import CardSection from "../components/card-section"
+import hourglass from "../images/hourglass.svg";
+import orchid from "../images/orchid.svg";
+import treeOfLife from "../images/tree-of-life.svg";
+import CardSection from "../components/card-section";
 
 const Headline = styled.h1`
   color: white;
@@ -33,7 +33,7 @@ const InstaSection = {
   backgroundColor: "#3860AA",
   marginBottom: "0.5rem",
   minHeight: "520px",
-}
+};
 
 const Content = () => (
   <div>
@@ -81,6 +81,6 @@ const Content = () => (
       <Instagram />
     </div>
   </div>
-)
+);
 
-export default Content
+export default Content;

@@ -1,10 +1,10 @@
-import React from "react"
-import PropTypes from "prop-types"
+import React from "react";
+import PropTypes from "prop-types";
 
-import { COLORS } from "../styles/constants"
-import logo from "../images/logo_xr_korea_b&w.png"
-import instagram from "../images/instagram.svg"
-import { Link } from "gatsby"
+import { COLORS } from "../styles/constants";
+import logo from "../images/logo_xr_korea_b&w.png";
+import instagram from "../images/instagram.svg";
+import { Link } from "gatsby";
 
 
 const Header = ({ siteTitle }) => (
@@ -74,14 +74,14 @@ const Header = ({ siteTitle }) => (
       </div>
     </div>
   </header>
-)
+);
 
 Header.propTypes = {
   siteTitle: PropTypes.string,
-}
+};
 
 Header.defaultProps = {
   siteTitle: ``,
-}
+};
 
-export default Header
+export default Header;

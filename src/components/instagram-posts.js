@@ -1,8 +1,8 @@
-import React from "react"
+import React from "react";
 
-import styled from "styled-components"
-import Img from "gatsby-image"
-import { StaticQuery, graphql } from "gatsby"
+import styled from "styled-components";
+import Img from "gatsby-image";
+import { StaticQuery, graphql } from "gatsby";
 
 const PostContainer = styled.div`
   display: grid;
@@ -17,19 +17,19 @@ const PostContainer = styled.div`
   align-content: center
   justify-content: center;
   max-width: 60rem;
-`
+`;
 
 const Wrapper = styled.a`
   position: relative;
   overflow: hidden;
   width: 100%;
-`
+`;
 
 const Node = ({ node }) => (
   <Wrapper plain href={`https://www.instagram.com/p/${node.id}/`}>
     <Img fluid={node.localFile.childImageSharp.fluid} />
   </Wrapper>
-)
+);
 
 const InstagramPosts = () => {
   return <StaticQuery
@@ -60,8 +60,7 @@ const InstagramPosts = () => {
       </PostContainer>
     )}
   >
-
-  </StaticQuery>
-}
+  </StaticQuery>;
+};
 
 export default InstagramPosts;

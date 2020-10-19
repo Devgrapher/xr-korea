@@ -1,10 +1,10 @@
-import React from "react"
+import React from "react";
 
-import { COLORS } from "../styles/constants"
-import styled from "styled-components"
+import { COLORS } from "../styles/constants";
+import styled from "styled-components";
 
-import CardSection from "../components/card-section"
-import frenchSuperbird from "../images/french-superbird.svg"
+import CardSection from "../components/card-section";
+import frenchSuperbird from "../images/french-superbird.svg";
 
 const Headline = styled.h1`
   color: white;
@@ -35,6 +35,6 @@ const Title = () => (
       </Description>
     </div>
   </CardSection>
-)
+);
 
-export default Title
+export default Title;

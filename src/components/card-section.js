@@ -1,6 +1,6 @@
-import React from "react"
+import React from "react";
 
-import styled from "styled-components"
+import styled from "styled-components";
 
 const Container = styled.div`
   position: relative;
@@ -42,6 +42,6 @@ const CardSection = ({children, bg, bgColor}) => (
       {children}
     </div>
   </Container>
-)
+);
 
 export default CardSection;
