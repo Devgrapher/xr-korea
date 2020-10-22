@@ -53,7 +53,7 @@ const InstaLink = styled.a`
 
 const Header = ({ siteTitle }) => (
   <Container>
-    <LeftHeader to="/">
+    <LeftHeader href="/">
       <Log src={logo} alt="logo"/>
       <Title src={title} alt="title"/>
     </LeftHeader>
