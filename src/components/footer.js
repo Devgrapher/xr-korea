@@ -11,7 +11,7 @@ const Container = styled.footer`
   flex-flow: colomn;
   align-ttems: center;
   justify-content: space-between;
-  padding: 1rem 2rem;
+  padding: 1rem 1.5rem;
   background-color: ${COLORS.green};
   fontSize: 1rem;
 `;

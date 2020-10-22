@@ -1,68 +1,68 @@
 import React from "react";
 import PropTypes from "prop-types";
 
+import styled from "styled-components";
 import { COLORS } from "../styles/constants";
-import logo from "../images/logo_xr_korea_b&w.png";
+import logo from "../images/logo_xr_korea.png";
+import title from "../images/title.png";
 import instagram from "../images/instagram.svg";
-import { Link } from "gatsby";
 
+
+const Container = styled.div`
+  display: flex;
+  flex-flow: colomn;
+  justify-content: space-between;
+  align-contents: center;
+  background: ${COLORS.green};
+  margin-bottom: 0.5rem;
+  padding: 1.5rem 1.5rem;
+`;
+
+const LeftHeader = styled.a`
+  color: white;
+  text-decoration: none;
+  display: flex;
+  flex-flow: colomn;
+  align-items: center;
+  margin: 0;
+  > img {
+    margin-right: 1rem;
+  }
+`;
+
+const RightHeader = styled.div`
+  display: flex;
+  flex-flow: colomn;
+  align-items: center;
+  color: white;
+`;
+
+const Log = styled.img`
+  width: 2.5rem;
+`;
+
+const Title = styled.img`
+  width: 10rem;
+`;
+
+const InstaLink = styled.a`
+  text-decoration: white;
+  color: ${COLORS.white};
+  margin-feft: 1rem;
+`;
 
 const Header = ({ siteTitle }) => (
-  <header
-    style={{
-      display: "flex",
-      flexFlow: "colomn",
-      alignItems: "center",
-      justifyContent: "space-between",
-      background: COLORS.green,
-      marginBottom: "0.5rem",
-      padding: "2rem 2rem",
-    }}
-  >
-    <div>
-      <Link
-        to="/"
-        style={{
-          color: "white",
-          textDecoration: "none",
-        }}
-      >
-        <h1
-          style={{
-            display: "flex",
-            flexFlow: "colomn",
-            alignItems: "center",
-            margin: 0,
-          }}
-        >
-          <img style={{width: "2.75rem"}} src={logo} alt="logo"/>
-          {/* <span style={{fontSize: "2rem", marginLeft: "0.5rem" }}>
-            멸종반란
-          </span>
-          <span style={{fontSize: "1.75rem", marginLeft: "0.5rem", color: COLORS.gray }}>
-            대한민국
-          </span> */}
-        </h1>
-      </Link>
-    </div>
-    <div
-      css={{ 
-        display: "flex",
-        flexFlow: "colomn",
-        alignItems: "center",
-        color: "white",
-      }}
-    >
-      <div>
-        <a
-          style={{ textDecoration: "white", color: COLORS.white, marginLeft: "1rem" }}
-          href="https://www.instagram.com/xr_korea/"
-        >
-          <img style={{width: "1.75rem", filter: "invert(1)"}} src={instagram} alt="instagram link" />
-        </a>
-      </div>
-    </div>
-  </header>
+  <Container>
+    <LeftHeader to="/">
+      <Log src={logo} alt="logo"/>
+      <Title src={title} alt="title"/>
+    </LeftHeader>
+    <RightHeader>
+      <InstaLink href="https://www.instagram.com/xr_korea/">
+        <img style={{height: "100%", verticalAlign: "middle", filter: "invert(1)"}} src={instagram} alt="instagram link" />
+      </InstaLink>
+    </RightHeader>
+  </Container>
 );
 
 Header.propTypes = {
