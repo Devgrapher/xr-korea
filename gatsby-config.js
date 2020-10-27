@@ -13,12 +13,6 @@ module.exports = {
     `gatsby-plugin-glamor`,
     `gatsby-plugin-styled-components`,
     {
-      resolve: `gatsby-plugin-google-analytics`,
-      options: {
-        trackingId: "G-MC7WLW20WJ",
-      },
-    },
-    {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
@@ -29,6 +23,17 @@ module.exports = {
       resolve: `gatsby-source-instagram`,
       options: {
         username: `41373805581`,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-gtag`,
+      options: {
+        // your google analytics tracking id
+        trackingId: `G-MC7WLW20WJ`,
+        // Puts tracking script in the head instead of the body
+        head: false,
+        // enable ip anonymization
+        anonymize: true,
       },
     },
   ],
