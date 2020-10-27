@@ -32,8 +32,8 @@ function SEO({ description, lang, meta, keywords, title }) {
       htmlAttributes={{
         lang,
       }}
-      title={title}
-      titleTemplate={`%s | ${site.siteMetadata.title}`}
+      title={title || site.siteMetadata.title}
+      titleTemplate={`%s | Home`}
       meta={[
         {
           name: `description`,
@@ -84,7 +84,7 @@ function SEO({ description, lang, meta, keywords, title }) {
 SEO.defaultProps = {
   lang: `kr`,
   meta: [],
-  keywords: [],
+  keywords: ["멸종저항", "extinction rebellion", "기후변화", "기후위기", "비폭력시민불복종운동", "사회운동", "기후위기비상행동"],
 };
 
 SEO.propTypes = {
