@@ -35,7 +35,7 @@ const InstagramPosts = () => {
   return <StaticQuery
     query={graphql`
       query {
-        allInstaNode(sort: {fields: id, order: DESC}, limit: 12) {
+        allInstaNode(sort: {fields: timestamp, order: DESC}, limit: 12) {
           edges {
             node {
               id
