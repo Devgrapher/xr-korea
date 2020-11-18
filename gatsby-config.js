@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `멸종반란 대한민국`,
+    title: `멸종반란 한국`,
     description: `Extinction Rebellion Korea`,
     author: `@fourpm`,
     siteUrl: `https://extinctionrebellion.kr`,
