@@ -4,7 +4,6 @@ import PropTypes from "prop-types";
 import styled from "styled-components";
 import { COLORS } from "../styles/constants";
 import logo from "../images/logo.svg";
-import title from "../images/title.png";
 import instagram from "../images/instagram.svg";
 
 
@@ -41,8 +40,17 @@ const Log = styled.img`
   width: 2.5rem;
 `;
 
-const Title = styled.img`
-  width: 10rem;
+const TitleArea = styled.div`
+  flex-flow: column;
+`;
+
+const TitleEn = styled.div`
+  font-size: 0.75em;
+  line-height: 1.6;
+`;
+
+const TitleKo = styled.div`
+  font-size: 1.7em;
 `;
 
 const InstaLink = styled.a`
@@ -55,7 +63,14 @@ const Header = ({ siteTitle }) => (
   <Container>
     <LeftHeader href="/">
       <Log src={logo} alt="logo"/>
-      <Title src={title} alt="title"/>
+      <TitleArea>
+        <TitleEn>
+          XR KOREA
+        </TitleEn>
+        <TitleKo>
+          멸종반란한국
+        </TitleKo>
+      </TitleArea>
     </LeftHeader>
     <RightHeader>
       <InstaLink href="https://www.instagram.com/xr_korea/">
