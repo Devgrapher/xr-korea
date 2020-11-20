@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 
 import styled from "styled-components";
 import { COLORS } from "../styles/constants";
-import logo from "../images/logo.png";
+import logo from "../images/logo.svg";
 import title from "../images/title.png";
 import instagram from "../images/instagram.svg";
 
