@@ -6,6 +6,8 @@ import styled from "styled-components";
 import hourglass from "../images/hourglass.svg";
 import orchid from "../images/orchid.svg";
 import treeOfLife from "../images/tree-of-life.svg";
+import bird from "../images/bird.svg";
+import { COLORS } from "../styles/constants";
 import CardSection from "../components/card-section";
 
 const Headline = styled.h1`
@@ -23,17 +25,29 @@ const Description = styled.h3`
   }
 `;
 
-const InstaSection = {
-  position: "relative",
-  display: "flex",
-  flexFlow: "column", 
-  alignItems: "center",
-  overflow: "hidden",
-  padding: "4rem 2rem",
-  backgroundColor: "#3860AA",
-  marginBottom: "0.5rem",
-  minHeight: "520px",
-};
+const InstaSection = styled.div`
+  position: relative;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  overflow: hidden;
+  padding: 4rem 2rem;
+  background-color: #3860AA;
+  margin-bottom: 0.5rem;
+  min-height: 520px;
+`;
+
+const JoinButton = styled.a`
+  background-color: ${COLORS.green};
+  border: none;
+  color: white;
+  padding: 1rem 2rem;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1.4rem;
+  font-weight: bold;
+`;
 
 const Content = () => (
   <div>
@@ -76,9 +90,27 @@ const Content = () => (
         </Description>
       </div>
     </CardSection>
-    <div style={InstaSection}>
+    <InstaSection>
       <Instagram />
-    </div>
+    </InstaSection>
+    <CardSection
+      bg={bird}
+      bgColor="#906198"
+    >
+      <div>
+        <Headline>
+          함께 행동하세요.
+        </Headline>
+        <Description>
+          우리의 활동이나 기후에 관한 중요한 소식을 받아보세요.
+          멸종반란 트레이닝에 참여하고 우리의 일을 도와주세요.
+          그리고 우리와 액션을 기획하고 함께 반란하세요.
+        </Description>
+        <JoinButton href='https://forms.gle/rEkeQQDAfLussaex9' target="_blank">
+          참여하기
+        </JoinButton>
+      </div>
+    </CardSection>
   </div>
 );
 
