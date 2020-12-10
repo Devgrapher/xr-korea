@@ -38,6 +38,7 @@ const InstaSection = styled.div`
 `;
 
 const JoinButton = styled.a`
+  position: relative;
   background-color: ${COLORS.green};
   border: none;
   color: white;
