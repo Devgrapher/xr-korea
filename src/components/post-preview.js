@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'gatsby';
 import Img from 'gatsby-image';
+import moment from 'moment';
 import styled from "styled-components";
 
 const Container = styled.div`
@@ -53,6 +54,9 @@ const Title = styled.h3`
 
 const Description = styled.div``;
 
+
+const formatDT = (dt) => moment(dt).local().format(`YYYY년 MM월 DD일`);
+
 export default ({post, primaryColor, secondaryColor}) => (
   <Container color={primaryColor}>
     <ImageItem>
@@ -70,6 +74,6 @@ export default ({post, primaryColor, secondaryColor}) => (
         }}
       />
     </TextItem>
-    <DateItem color={secondaryColor}>{post.publishDate}</DateItem>
+    <DateItem color={secondaryColor}>{formatDT(post.publishDate)}</DateItem>
   </Container>
 );

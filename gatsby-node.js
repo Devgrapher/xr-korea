@@ -5,7 +5,7 @@ exports.createPages = async ({ graphql, actions }) => {
   const postTemplate = path.resolve('./src/templates/post.js');
   const result = await graphql(`
     {
-      allContentfulPost {
+      allContentfulPost(filter: {node_locale: {eq: "ko-KR"}}) {
         edges {
           node {
             title

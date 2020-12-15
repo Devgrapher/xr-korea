@@ -15,7 +15,6 @@ const PostContainer = styled.div`
   margin-bottom: 9px;
   &:after {
     content: "";
-    // flex: auto;
   }
 `;
 
@@ -75,12 +74,12 @@ export const pageQuery = graphql`
         title
       }
     }
-    allContentfulPost(sort: { fields: [publishDate], order: DESC }) {
+    allContentfulPost(filter: {node_locale: {eq: "ko-KR"}}, sort: { fields: [publishDate], order: DESC }) {
       edges {
         node {
           title
           slug
-          publishDate(formatString: "MMMM Do, YYYY")
+          publishDate
           tags
           heroImage {
             fluid(maxWidth: 350, maxHeight: 196, resizingBehavior: SCALE) {

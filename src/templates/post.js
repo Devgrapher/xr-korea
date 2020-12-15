@@ -3,14 +3,32 @@ import { graphql } from 'gatsby';
 import { Helmet } from 'react-helmet';
 import get from 'lodash/get';
 import Img from 'gatsby-image';
+import moment from 'moment';
 import Layout from '../components/layout';
 import styled from 'styled-components';
 
+const TitleDiv = styled.div`
+  width: 100%;
+  min-height: 4rem;
+  margin-bottom: 9px;
+  padding: 2rem;
+  text-align: center;
+  background-color: #ffc11e;
+`;
+
+const ContentDiv = styled.div`
+  max-width: 672px;
+  background: '#fff';
+  margin: 0 auto;
+  padding: 0.5rem;
+  @media (min-width: 700px) {
+    padding: 0;
+  }
+`;
+
 const HeroDiv = styled.div`
   position: relative;
-  background: #000;
-  color: #fff;
-  text-align: center;
+  margin-bottom: 2rem;
 `;
 
 const HeroImage = styled(Img)`
@@ -22,6 +40,19 @@ const HeroImage = styled(Img)`
   max-height: 400px;
 `;
 
+const Date = styled.div`
+  font-weight: bold;
+`;
+
+const Remark = styled.div`
+  text-align: justify;
+  @media (min-width: 650px) {
+    word-break: keep-all;
+    text-align: justify;
+  }
+`;
+
+const formatDT = (dt) => moment(dt).local().format(`YYYY년 MM월 DD일`);
 class PostTemplate extends React.Component {
   render() {
     const post = get(this.props, 'data.contentfulPost');
@@ -29,30 +60,24 @@ class PostTemplate extends React.Component {
 
     return (
       <Layout location={this.props.location}>
-        <div style={{ background: '#fff' }}>
-          <Helmet title={`${post.title} | ${siteTitle}`} />
+        <Helmet title={`${post.title} | ${siteTitle}`} />
+        <TitleDiv>
+          <h1>{post.title}</h1>
+          <Date>{formatDT(post.publishDate)}</Date>
+        </TitleDiv>
+        <ContentDiv>
           <HeroDiv>
             <HeroImage
               alt={post.title}
               fluid={post.heroImage.fluid}
             />
           </HeroDiv>
-          <div className="wrapper">
-            <h1 className="section-headline">{post.title}</h1>
-            <p
-              style={{
-                display: 'block',
-              }}
-            >
-              {post.publishDate}
-            </p>
-            <div
-              dangerouslySetInnerHTML={{
-                __html: post.body.childMarkdownRemark.html,
-              }}
-            />
-          </div>
-        </div>
+          <Remark
+            dangerouslySetInnerHTML={{
+              __html: post.body.childMarkdownRemark.html,
+            }}
+          />
+        </ContentDiv>
       </Layout>
     );
   }
@@ -69,7 +94,7 @@ export const pageQuery = graphql`
     }
     contentfulPost(slug: { eq: $slug }) {
       title
-      publishDate(formatString: "MMMM Do, YYYY")
+      publishDate
       heroImage {
         fluid(maxWidth: 1180, background: "rgb:000000") {
           ...GatsbyContentfulFluid_tracedSVG
