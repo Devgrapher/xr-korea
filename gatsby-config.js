@@ -7,6 +7,7 @@ module.exports = {
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
+    `gatsby-transformer-remark`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-sitemap`,
@@ -23,6 +24,13 @@ module.exports = {
       resolve: `gatsby-source-instagram`,
       options: {
         username: `41373805581`,
+      },
+    },
+    {
+      resolve: `gatsby-source-contentful`,
+      options: {
+        spaceId: `xehp2mql95m5`,
+        accessToken: `6hLpDrbovxzH7D9IcEwnzVNxo7C1dFg-jeBghFPTSSY`,
       },
     },
     {
