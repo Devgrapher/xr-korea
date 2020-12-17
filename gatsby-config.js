@@ -12,6 +12,7 @@ module.exports = {
     `gatsby-plugin-sharp`,
     `gatsby-plugin-sitemap`,
     `gatsby-plugin-glamor`,
+    `gatsby-plugin-anchor-links`,
     `gatsby-plugin-styled-components`,
     {
       resolve: `gatsby-source-filesystem`,

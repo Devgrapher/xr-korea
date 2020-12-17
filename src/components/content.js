@@ -92,10 +92,13 @@ const Content = () => (
         </Description>
       </div>
     </CardSection>
-    <InstaSection>
+    <InstaSection
+      id="instagram"
+    >
       <Instagram />
     </InstaSection>
     <CardSection
+      ancherId="join-us"
       bg={bird}
       bgColor="#906198"
     >

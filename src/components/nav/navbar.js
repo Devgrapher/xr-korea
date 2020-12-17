@@ -1,7 +1,7 @@
 import React from 'react';
 
-import { Link } from 'gatsby';
-import styled from 'styled-components';
+import { AnchorLink } from "gatsby-plugin-anchor-links";
+import styled, { css } from 'styled-components';
 
 
 const Container = styled.div`
@@ -11,7 +11,7 @@ const Container = styled.div`
   align-items: center;
 `;
 
-const MenuButton = styled(Link)`
+const MenuButtonStyle = css`
   text-decoration: none;
   color: black;
   padding: 0 1rem;
@@ -27,11 +27,25 @@ const MenuButton = styled(Link)`
   }
 `;
 
-const Menu = ({children}) => {
+const InternalButton = styled(AnchorLink)`
+  ${MenuButtonStyle}
+`;
+
+const ExternalButton = styled.a`
+  ${MenuButtonStyle}
+`;
+
+const Menu = ({children, to, newTab}) => {
   return (
-    <MenuButton to={`/`}>
-      {children}
-    </MenuButton>
+    newTab ? (
+      <ExternalButton href={to} target="_blank">
+        {children}
+      </ExternalButton>
+    ) : (
+      <InternalButton to={to}>
+        {children}
+      </InternalButton>
+    )
   );
 };
 
@@ -39,10 +53,15 @@ const NavBar = () => {
 
   return (
     <Container>
-      <Menu>뉴스</Menu>
-      <Menu>보도자료</Menu>
-      <Menu>활동</Menu>
-      <Menu>참여하기</Menu>
+      <Menu to="/post">소식</Menu>
+      <Menu
+        to="https://www.notion.so/bf0a84fb63014eef9feb9bc0771c87a8?v=bc7a835e5baf49a3896d037a3d77e4ca"
+        newTab
+      >
+        언론보도
+      </Menu>
+      <Menu to="/#instagram">활동</Menu>
+      <Menu to="/#join-us">참여하기</Menu>
     </Container>
   );
 };

@@ -32,8 +32,8 @@ const BgImage = styled.img`
   opacity: .06;
 `;
 
-const CardSection = ({children, bg, bgColor}) => (
-  <Container bgColor={bgColor}>
+const CardSection = ({children, ancherId, bg, bgColor}) => (
+  <Container id={ancherId} bgColor={bgColor}>
     <BgImage
       src={bg}
       alt="background"

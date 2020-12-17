@@ -1,7 +1,6 @@
 import React from 'react';
 
 import { Link } from 'gatsby';
-import Img from 'gatsby-image';
 import styled from 'styled-components';
 import { COLORS } from "../../styles/constants";
 import logo from "../../images/logo.svg";
