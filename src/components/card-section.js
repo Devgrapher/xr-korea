@@ -5,12 +5,20 @@ import styled from "styled-components";
 const Container = styled.div`
   position: relative;
   display: flex;
-  flex-flow: column;
+  flex-flow: row;
+  justify-content: center;
   overflow: hidden;
   padding: 4rem 2rem;
   background-color: ${props => props.bgColor};
   margin-bottom: 0.5rem;
   min-height: 520px;
+`;
+
+const TextArea = styled.div`
+  flex: 1 1 1000px;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  max-width: 1200px;
 `;
 
 const BgImage = styled.img`
@@ -30,17 +38,9 @@ const CardSection = ({children, bg, bgColor}) => (
       src={bg}
       alt="background"
     />
-    <div
-      css={{
-        paddingTop: "4rem",
-        paddingBottom: "4rem",
-        '@media (min-width: 700px)': {
-          paddingLeft: "10vw",
-        },
-        maxWidth: "1280px",
-      }}>
+    <TextArea>
       {children}
-    </div>
+    </TextArea>
   </Container>
 );
 

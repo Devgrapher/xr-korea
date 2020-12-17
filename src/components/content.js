@@ -10,6 +10,7 @@ import bird from "../images/bird.svg";
 import { COLORS } from "../styles/constants";
 import CardSection from "../components/card-section";
 
+
 const Headline = styled.h1`
   color: white;
   margin-bottom: 3rem;
