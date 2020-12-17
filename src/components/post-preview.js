@@ -16,12 +16,13 @@ const Container = styled.div`
   > * {
     overflow: hidden;
   }
-  a {
-    color: black;
-    text-decoration: none;
-    &:hover {
-      text-decoration: underline;
-    }
+`;
+
+const StyledLink = styled(Link)`
+  color: black;
+  text-decoration: none;
+  :hover {
+    text-decoration: underline;
   }
 `;
 
@@ -60,13 +61,13 @@ const formatDT = (dt) => moment(dt).local().format(`YYYY년 MM월 DD일`);
 export default ({post, primaryColor, secondaryColor}) => (
   <Container color={primaryColor}>
     <ImageItem>
-      <Link to={`/post/${post.slug}`}>
+      <StyledLink to={`/post/${post.slug}`} c>
         <CoverImage alt="" fluid={post.heroImage.fluid} />
-      </Link>
+      </StyledLink>
     </ImageItem>
     <TextItem>
       <Title>
-        <Link to={`/post/${post.slug}`}>{post.title}</Link>
+        <StyledLink to={`/post/${post.slug}`}>{post.title}</StyledLink>
       </Title>
       <Description
         dangerouslySetInnerHTML={{
