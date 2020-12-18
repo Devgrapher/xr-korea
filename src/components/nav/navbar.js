@@ -37,7 +37,7 @@ const ExternalButton = styled.a`
 const Menu = ({children, to, newTab}) => {
   return (
     newTab ? (
-      <ExternalButton href={to} target="_blank">
+      <ExternalButton href={to} target="_blank" rel="noopener">
         {children}
       </ExternalButton>
     ) : (

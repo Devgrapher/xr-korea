@@ -109,7 +109,7 @@ const Content = () => (
         <Description>
           더이상 바꿀 수 없는 미래에 홀로 좌절하지 마세요. 함께 이야기를 나누는 것에서 변화는 시작됩니다. 우리의 경험과 이야기를 들어보세요. 평범한 시민이 어떻게 세상을 변화시키는지 옆에서 직접 목격하세요.
         </Description>
-        <JoinButton href='https://forms.gle/rEkeQQDAfLussaex9' target="_blank">
+        <JoinButton href='https://forms.gle/rEkeQQDAfLussaex9' target="_blank" rel="noopener">
           참여하기
         </JoinButton>
       </div>
