@@ -86,7 +86,7 @@ function SEO({ description, lang, meta, keywords, title }) {
 }
 
 SEO.defaultProps = {
-  lang: `kr`,
+  lang: `ko`,
   meta: [],
   keywords: ["멸종반란한국", "멸종반란", "멸종저항", "extinction rebellion", "기후변화", "기후위기", "비폭력시민불복종운동", "사회운동", "기후위기비상행동"],
 };
