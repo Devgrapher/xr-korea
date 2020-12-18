@@ -1,5 +1,4 @@
 import React from 'react';
-
 import { AnchorLink } from "gatsby-plugin-anchor-links";
 import styled, { css } from 'styled-components';
 
@@ -49,21 +48,13 @@ const Menu = ({children, to, newTab}) => {
   );
 };
 
-const NavBar = () => {
 
-  return (
-    <Container>
-      <Menu to="/post">소식</Menu>
-      <Menu
-        to="https://www.notion.so/bf0a84fb63014eef9feb9bc0771c87a8?v=bc7a835e5baf49a3896d037a3d77e4ca"
-        newTab
-      >
-        언론보도
-      </Menu>
-      <Menu to="/#instagram">활동</Menu>
-      <Menu to="/#join-us">참여하기</Menu>
-    </Container>
-  );
-};
+const NavBar = ({ menuLinks }) => (
+  <Container>
+    {menuLinks.map(menu => (
+      <Menu key={menu.name} to={menu.link} newTab={menu.external}>{menu.name}</Menu>
+    ))}
+  </Container>
+);
 
 export default NavBar;

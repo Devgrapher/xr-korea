@@ -40,6 +40,7 @@ const NavItem = styled.div`
 `;
 
 const Nav = props => {
+  const { menuLinks } = props;
   return (
     <Container>
       <HeaderBar>
@@ -47,7 +48,7 @@ const Nav = props => {
           <img src={logo} alt="logo"/>
         </LogoLinkItem>
         <NavItem>
-          <NavBar />
+          <NavBar menuLinks={menuLinks} />
         </NavItem>
       </HeaderBar>
     </Container>

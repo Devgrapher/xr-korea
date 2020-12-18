@@ -4,6 +4,25 @@ module.exports = {
     description: `Extinction Rebellion Korea`,
     author: `@fourpm`,
     siteUrl: `https://extinctionrebellion.kr`,
+    menuLinks: [
+      {
+        name: '소식',
+        link: '/post'
+      },
+      {
+        name: '언론보도',
+        link: 'https://www.notion.so/bf0a84fb63014eef9feb9bc0771c87a8?v=bc7a835e5baf49a3896d037a3d77e4ca',
+        external: true,
+      },
+      {
+        name: '활동',
+        link: '/#instagram',
+      },
+      {
+        name: '참여하기',
+        link: '/#join-us',
+      }
+    ]
   },
   plugins: [
     `gatsby-plugin-react-helmet`,

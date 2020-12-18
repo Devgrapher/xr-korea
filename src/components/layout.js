@@ -20,13 +20,18 @@ const Layout = ({ children }) => (
         site {
           siteMetadata {
             title
+            menuLinks {
+              name
+              link
+              external
+            }
           }
         }
       }
     `}
     render={data => (
       <>
-        <Nav />
+        <Nav menuLinks={data.site.siteMetadata.menuLinks} />
         <div
           style={{
             padding: "0 0.5rem",
