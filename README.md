@@ -1,5 +1,6 @@
-# Extincion Rebellion Korea
+# Extinction Rebellion Korea
 
+Official site of Extinction Rebellion Korea: https://extinctionrebellion.kr
 ## Prerequisites
 
 If you do not have the Gatsby CLI installed yet, do it first.
@@ -12,16 +13,9 @@ The Gatsby CLI uses Node and npm which you will also need installed. More inform
 
 ## 🚀 Getting Started
 
-Install the starter using the Gatsby new command.
-
 ```bash
-gatsby new landing-page https://github.com/gillkyle/gatsby-starter-landing-page.git
-```
-
-Navigate into the project directory and launch the site.
-
-```bash
-cd landing-page && gatsby develop
+npm build
+npm develop
 ```
 
 The site will be opened up in your default browser on http://localhost:8000
