@@ -26,11 +26,15 @@ const Row = styled.div`
 `;
 
 const RowHeader = styled.h1`
-  flex: 0 1 3.5rem;
+  flex: 0 1 3rem;
   text-align: right;
   line-height: 4.5rem;
-  font-size: 3.5rem;
+  font-size: 3rem;
   margin: 0rem 1rem 0rem 0rem;
+  @media (min-width: 700px) {
+    flex: 0 1 4rem;
+    font-size: 3.5rem;
+  }
 `;
 
 const RowContent = styled.div`
