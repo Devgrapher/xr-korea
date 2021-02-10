@@ -9,6 +9,8 @@ import treeOfLife from "../images/tree-of-life.svg";
 import bird from "../images/bird.svg";
 import { COLORS } from "../styles/constants";
 import CardSection from "../components/card-section";
+import Demands from "../components/demands";
+import Pnvs from "../components/pnvs";
 
 
 const Headline = styled.h1`
@@ -54,29 +56,27 @@ const JoinButton = styled.a`
 const Content = () => (
   <div>
     <CardSection
-      bg={hourglass}
+      bg={orchid}
       bgColor="#75D0F1"
     >
       <div>
         <Headline>
-          현실을 직시해야 합니다.
+          과학은 분명히 이야기합니다.
         </Headline>
         <Description>
-          우리는 인류의 파괴적인 성장만능주의가 불러온 제6차 대멸종 시대를 살고 있습니다. 기후재앙은 팬더믹, 생태파괴, 식량난, 기후난민 등을 가속화하여 인간 문명뿐만 아니라 모든 생물종의 생존을 위협하고 있습니다. 정부는 이런 현실을 직시하고 기후-생태위기 비상사태를 선포해야 합니다.
+        우리는 전 세계적인 재앙에 직면해 있습니다. 지구상의 모든 생명은 위험에 처해 있으며 과학자들은 우리가 기후 및 생태학적 붕괴의 시대에 접어들고 있다는데 동의합니다. 산불에서 폭염, 가뭄, 해수면 상승에 이르기까지 우리가 행동하지 않는 동안 상황은 악화되고 있으며 남은 시간은 점점 줄어들고 있습니다.
         </Description>
       </div>
     </CardSection>
     <CardSection
-      bg={orchid}
+      bg={hourglass}
       bgColor="#EC64A7"
     >
       <div>
         <Headline>
-          지금 행동해야 합니다.
+          우리의 요구
         </Headline>
-        <Description>
-          지구가 회복력을 잃어버릴 시점까지 7년밖에 남지 않았습니다. 기후위기에 맞선 세계 곳곳의 비폭력 시민불복종 행동은 정부와 기업에 변화를 촉구하고 있습니다. 정부를 비롯한 모든 사회구성원은 생태계 보존-복원과 급진적 온실가스 감축을 위한 행동에 나서야 합니다.
-        </Description>
+        <Demands/>
       </div>
     </CardSection>
     <CardSection
@@ -85,11 +85,9 @@ const Content = () => (
     >
       <div>
         <Headline>
-          이념을 넘어 연대해야 합니다.
+          우리의 원칙
         </Headline>
-        <Description>
-          기후위기는 모두의 생존 문제이므로 정쟁의 대상이 될 수 없습니다. 살아남기 위해서는 국적과 종을 넘어 연대해야 하며, 노동자, 농민, 지역주민 등 일반 시민들의 다양한 목소리를 담아 기후-생태정의를 실현할 시민이 주도하는 범사회적 에너지전환기구가 필요합니다.
-        </Description>
+        <Pnvs/>
       </div>
     </CardSection>
     <InstaSection
