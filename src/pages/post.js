@@ -10,7 +10,7 @@ import styled from 'styled-components';
 const PostContainer = styled.div`
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: flex-start;
   flex-wrap: wrap;
   margin-bottom: 9px;
   &:after {
