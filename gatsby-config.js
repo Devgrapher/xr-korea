@@ -1,3 +1,7 @@
+require("dotenv").config({
+  path: `.env`,
+});
+
 module.exports = {
   siteMetadata: {
     title: `멸종반란한국`,
@@ -52,7 +56,7 @@ module.exports = {
       resolve: `gatsby-source-contentful`,
       options: {
         spaceId: `xehp2mql95m5`,
-        accessToken: `6hLpDrbovxzH7D9IcEwnzVNxo7C1dFg-jeBghFPTSSY`,
+        accessToken: `${process.env.CONTENTFUL_TOKEN}`,
       },
     },
     {
