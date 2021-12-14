@@ -69,8 +69,8 @@ const Content = () => (
       </div>
     </CardSection>
     <CardSection
-      bg={orchid}
-      bgColor="#75D0F1"
+      bg={treeOfLife}
+      bgColor="#FFC11F"
     >
       <div>
         <Headline>
@@ -94,7 +94,7 @@ const Content = () => (
     </CardSection>
     <CardSection
       bg={treeOfLife}
-      bgColor="#FFC11F"
+      bgColor="#906198"
     >
       <div>
         <Headline>
